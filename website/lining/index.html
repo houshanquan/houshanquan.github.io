@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>李宁抽奖</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.7.2-min.js"></script>
+	<script src="js/easing.js"></script>
+	
+	<script>
+		;(function(win,doc){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth*20/320+'px';
+			win.onload=win.onresize=function(){
+				document.documentElement.style.fontSize = document.documentElement.clientWidth*20/320+'px';
+			};
+		})(window,document);
+	</script>
+</head>
+<body>
+	<div class="logo"></div>
+	<div class="contentBox">
+		<!--头部-->
+		<div class="hd">
+			<img src="img/5.png" class="Moon">
+			<img src="img/4.png" class="title">
+			<img src="img/6.png" class="ruleBtn">
+		</div>
+		<!--抽奖框-->
+		<div class="draw">
+			<div class="drawBox clearfix">
+				<div class="num num1 fl"></div>
+			    <div class="num num2 fl"></div>
+			    <div class="num num3 fl"></div>
+			</div>
+			<div class="blackBg"></div>
+		</div>
+		<!--抽奖次数-->
+		<div class="opp">
+			您有&nbsp;<span>3</span>&nbsp;次机会
+		</div>
+		<!--抽奖按钮-->
+		<div class="drawBtn">
+			<img src="img/7-1.png" class="btnFoot">
+			<img src="img/7-2.png" class="drawBtnChild">
+		</div>
+		<!--底部-->
+		<div class="foot">
+			<div class="Notice">
+				<div class="title clearfix">
+					<b class="fl">中奖用户</b>
+					<span class="fr">实时更新</span>
+				</div>
+				<marquee direction=up scrolldelay=200 class="NoticeList">
+					<ul >
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+						<li>
+							<p>恭喜&nbsp;<span>18511339113</span>&nbsp;用户&nbsp;</p>
+							<p>获得&nbsp;<span>李宁云三代全面跑鞋一双</span></p>
+						</li>
+					</ul>
+				</marquee >
+			</div>
+		</div>
+	</div>
+	<!--活动规则-->
+	<div class="base ruleBox">
+		<img src="img/TK1.png" >
+	</div>
+	<!--无帽卫衣中奖弹框-//-中奖-->
+	<div class="base Sweater Winning">
+		<img src="img/TK2-1.png" >
+	</div>
+	<!--云三代中奖弹框-//-中奖-->
+	<div class="base cloud Winning">
+		<img src="img/TK2-2.png" >
+	</div>
+	<!--李宁韦德之道4中奖弹框-//-中奖-->
+	<div class="base Wade Winning">
+		<img src="img/TK2-3.png" >
+	</div>
+	<!--减震跑鞋中奖弹框-//-中奖-->
+	<div class="base Running Winning">
+		<img src="img/TK2-5.png" >
+	</div>
+	<!--运动胸衣中奖弹框-//-中奖-->
+	<div class="base Corset Winning">
+		<img src="img/TK2-6.png" >
+	</div>
+	<!--完善信息-->
+	<div class="base data">
+		<div class="formBox">
+			<form action="" method="post">
+				<input type="text" placeholder="请输入您的姓名" class="name">
+				<input type="text" placeholder="请输入您的手机号" class="phone">
+				<textarea type="text" placeholder="请输入您的地址" class="add"></textarea>
+				<input type="text" placeholder="请输入您的尺寸" class="size">
+			</form>
+			<div class="submitBtn"></div>
+		</div>
+		<!--提交成功-->
+		<div class="submitYes">
+			<img src="img/TK4-2.png">
+		</div>
+		<!--提交失败 完善信息-->
+		<div class="submitNo">
+			<img src="img/TK4-1.png">
+		</div>
+	</div>
+	<!--未中奖-->
+	<div class="NoWinning">
+		<img src="img/TK6.png" >
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
