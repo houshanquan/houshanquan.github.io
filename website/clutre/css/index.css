@@ -1,0 +1,135 @@
+*{margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;}
+li{list-style:none;}
+body{font-family:"黑体";}
+.swiper-container {width: 100%;height: 100%;background:#fff;}  
+.swiper-slide{width:100%;height:100%;overflow:hidden;}
+.swiper-slide1{background:url(../upload/1.jpg) no-repeat;background-size:100% 100%;}
+img{display:block;}
+.swiper-pagination-bullet {width: 6px;height: 6px;background: #fff;opacity: .4;}
+.swiper-pagination-bullet-active {opacity: 1;}
+@-webkit-keyframes tipmove{
+	0%{bottom:10px;opacity:0}
+	50%{bottom:15px;opacity:1}
+	100%{bottom:20px;opacity:0}
+}
+.ani{position:absolute;}
+.txt{position:absolute;}
+#array{position:absolute;z-index:999;-webkit-animation: tipmove 1.5s infinite ease-in-out;}
+/*loading*/
+.loading{width:100%;height:100%;background:#000;position:absolute;top:0;left:0;z-index:100;}
+.loadingNum{width:100px;height:50px;font-size:24px;line-height: 50px;text-align: center;color:#50504c;position:absolute;top:259px;left:120px;overflow:hidden;}
+.loadBg1{width:320px;height:568px;position:absolute;top:0;left:0;}
+.loadBg2{width:320px;height:228px;position:absolute;left:0;top:110px;}
+/*--第一页游戏--*/
+
+.game{width:271px;height:365px;background:url(../upload/5.png) no-repeat;background-size:100% 100%; position:absolute;top:85px;left:25px;z-index:5;display:none;}
+.close{width:23px;position:absolute;top:10px;left:235px;}
+
+.leftImg{width:107px;position:absolute;top:65px;left:-25px;}
+.rightImg{width:107px;position:absolute;top:240px;left:188px;}
+.textList{width:135px;height:120px;position:absolute;top:105px;left:65px;}
+.listLi{width:27px;height:27px;position:absolute;top:0;left:0;background:url(../upload/11.png) no-repeat;background-size:100% 100%;text-align:center;color:#fff;}
+.listLi1{left:0;}
+.listLi2{left:35px;}
+.listLi3{left:70px;}
+.listLi4{left:105px;}
+.listLi5{top:45px;left:0;}
+.listLi6{top:45px;left:35px;}
+.listLi7{top:45px;left:70px;}
+.listLi8{top:45px;left:105px;}
+.listLi9{top:90px;left:0px;}
+.listLi10{top:90px;left:35px;}
+.listLi11{top:90px;left:70px;}
+.listLi12{top:90px;left:105px;}
+/*用户选择结果框*/
+.oResult{width:135px;height:30px;position:absolute;top:230px;left:65px;background:url(../upload/8.png) no-repeat;background-size:100% 100%;text-align:center;color:#fff;}
+.Gravity{width:82px;height:32px;position:absolute;top:300px;left:42px;background:url(../upload/7.png) no-repeat;background-size:100% 100%;}
+.browse{width:82px;height:32px;position:absolute;top:300px;left:145px;background:url(../upload/browse.png) no-repeat;background-size:100% 100%;}
+.zhengque{width:100px;position:absolute;top:275px;left:80px;display:none;}
+.oCuowu{width:100px;position:absolute;top:275px;left:80px;display:none;}
+
+
+.bg2{-webkit-animation:toOpacity 1s linear 1.5s forwards;animation:toOpacity 1s linear 1.5s forwards;position:absolute;}
+.bg3{-webkit-animation:toOpacity 3s linear 2.5s infinite alternate;animation:toOpacity 3s linear 2.5s infinite alternate;position:absolute;}
+@keyframes toOpacity{
+	0%{opacity:0;}
+	85%{opacity:1;}
+	100%{opacity:1;}
+}
+
+@-webkit-keyframes toOpacity{
+	0%{opacity:0;}
+	85%{opacity:1;}
+	100%{opacity:1;}
+}
+
+/*参与抽奖页*/
+.draw{width:320px;height:520px;background-color:rgba(256,256,256,0.8);position:absolute;top:0;left:0;z-index:3;display:none;}
+.info{width:290px;height:302px;background:url(../upload/tanBox.png) no-repeat;background-size:100% 100%;position:absolute;top:110px;left:15px;}
+.info1{width:290px;height:302px;position:absolute;top:0;left:0;display:none;}
+.info2{width:290px;height:302px;position:absolute;top:0;left:0;display:none;}
+.info3{width:290px;height:302px;position:absolute;top:0;left:0;display:none;}
+
+.guanbi{width:23px;position:absolute;top:10px;left:256px;z-index:100;}
+
+.nameImg{width:214px;position:absolute;top:65px;left:35px;}
+.success{width:151px;position:absolute;top:170px;left:90px;display:none;}
+.nameInp{width: 146px;height: 23px;outline: none;position: absolute;top: 69px;left:100px;border:none;background:none;color:#fff;}
+.phoneImg{width:214px;position:absolute;top:105px;left:35px;}
+.phoneInp{width: 146px;height: 23px;outline: none;position: absolute;top: 109px;left:100px;border:none;background:none;color:#fff;}
+.zuihou10{width:168px;position:absolute;top:140px;left:60px;}
+.xinxi{width:102px;position:absolute;top:202px;left:40px;}
+.shuoming{width:102px;position:absolute;top:202px;left:140px;}
+.zuihou11{width:198px;position:absolute;top:106px;left:46px;}
+.zuihou12{width:127px;height:34px;position:absolute;top:200px;left:77px;background:url(../upload/zuihou12.png) no-repeat;background-size:100% 100%;}
+.zuihou122{width:127px;position:absolute;position:absolute;top:245px;left:77px;}
+.zuihou14{width:216px;position:absolute;top:25px;left:40px;}
+/*分享页*/
+.FX{width:320px;height:520px;background-color:rgba(256,256,256,0.8);position:absolute;top:0;left:0;z-index:3;display:none;}
+.FXImg{width:27px;position:absolute;top:20px;left:285px;-webkit-animation:toTop 1s linear 1s infinite alternate;animation:toTop 1s linear 1s infinite alternate;}
+.FXTxt{width:18px;position:absolute;top:190px;left:290px;}
+
+@keyframes toTop{
+	0%{transform:translateY(0)}
+	100%{transform:translateY(15px)}
+}
+
+@-webkit-keyframes toTop{
+	0%{-webkit-transform:translateY(0)}
+	100%{-webkit-transform:translateY(15px)}
+}
+/*参与话题*/
+.huatiBox{width:320px;height:520px;background-color:rgba(256,256,256,0.8);position:absolute;top:0;left:0;z-index:3;display:none;}
+.dianji{width:23px;position:absolute;top:10px;left:256px;z-index:100;}
+
+
+
+@keyframes to2Opacity{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@-webkit-keyframes to2Opacity{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+/*新增页*/
+.oFanzhuan{position:absolute;}
+.oFanzhuan1{display:none;}
+@keyframes oFanzhuan{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+@-webkit-keyframes oFanzhuan{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+
+
+
+
+
+

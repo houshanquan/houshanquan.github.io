@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云上贵州，当文化与科技不期而遇</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/index.css">
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/music.js"></script> 
+<script src="js/pxloader-all.min.js"></script> 
+<script src="js/swiper.min.js"></script>
+<!--<script src="js/swiper.animate.min.js"></script>
+<script src="js/size.js"></script>
+<script src="js/index.js"></script>-->
+</head>
+
+<body>
+
+	<div class="loading" id="lb-loading resize66">
+    	<img src="upload/loadBg2.png" class="resize66 loadBg2">
+		
+        <img src="upload/loadBg1.png" class="resize66 loadBg1">
+        <div class="loadingNum resize66" font-family="楷体">10%</div>
+	</div>
+    <div class="swiper-container">
+		<div class="swiper-wrapper">
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+
+var jindu= document.querySelector('.loadingNum');//进度条
+var oLoding = document.querySelector('.loading');//loding页
+var loadBg2=document.querySelector('.loadBg2')//背景
+var oBodyW=parseInt(document.body.clientWidth||document.documentElement.clientWidth);
+loadBg2.style.transform='translateX(-'+loadBg2.clientWidth+'px)';
+loadBg2.style.Webkittransform='translateX(-'+loadBg2.clientWidth+'px)';
+//oCont.addEventListener('touchend',touch, false);  
+var arr=[
+	'01.png',
+	'02.png',
+	'1-1.png',
+	'1-2.png',
+	'1-3.png',
+	'1-4.png',
+	'1.jpg',
+	'10.png',
+	'11.png',
+	'2-1.png',
+	'2-2.png',
+	'2-3.png',
+	'2-4.png',
+	'2-5.png',
+	'2-6.png',
+	'2.png',
+	'22.png',
+	'3-1.png',
+	'3-2.png',
+	'3-3.png',
+	'3-4.png',
+	'3-5.png',
+	'3.png',
+	'4-1.png',
+	'4-2.png',
+	'4-3.png',
+	'4-4.png',
+	'4-5.png',
+	'4-6.png',
+	'5-1.png',
+	'5-2.png',
+	'5-3.png',
+	'5-4.png',
+	'5-5.png',
+	'5-6.png',
+	'5.png',
+	'6-1.png',
+	'6-2.png',
+	'6-3.png',
+	'6-4.png',
+	'6-5.png',
+	'6-6.png',
+	'7.png',
+	'8.png',
+	'9.png',
+	'bg1.jpg',
+	'bg2.jpg',
+	'bg3.jpg',
+	'bg4.png',
+	'changan.png',
+	'dian.png',
+	'dshang.png',
+	'dxia.png',
+	'erweima.png',
+	'fanhui.png',
+	'FX.png',
+	'FXtxt.png',
+	'gongtan.png',
+	'left0.png',
+	'liangzi.png',
+	'loadBg1.png',
+	'loadBg2.png',
+	'name.png',
+	'off.png',
+	'on.png',
+	'phone.png',
+	'qizi.png',
+	'right0.png',
+	'sanzi.png',
+	'shi1.png',
+	'shi2.png',
+	'shipin.png',
+	'shu1.png',
+	'shu2.png',
+	'shuoming.png',
+	'shuzi.png',
+	'sizi.png',
+	'tanBox.png',
+	'xing1.png',
+	'xing2.png',
+	'xinglu.png',
+	'xinxi.png',
+	'yi1.png',
+	'yi2.png',
+	'yifu.png',
+	'ying1.png',
+	'ying2.png',
+	'yingzi.png',
+	'zhi1.png',
+	'zhi2.png',
+	'zhusuo.png',
+	'zuihou1.png',
+	'zuihou10.png',
+	'zuihou11.png',
+	'zuihou111.png',
+	'zuihou12.png',
+	'zuihou14.png',
+	'zuihou2.png',
+	'zuihou4.png',
+	'zuihou5.png',
+	'zuihou6.png',
+	'zuihou7.png'
+	];
+var loader = new PxLoader(),baseUrl='upload/';
+	for(var i=0;i<arr.length;i++){
+		var pxImage = new PxLoaderImage(baseUrl+arr[i]);
+		pxImage.imageNumber = i + 1;
+		loader.add(pxImage);
+	}
+	loader.addProgressListener(function(e) {
+		var num = Math.floor((e.completedCount/e.totalCount)*100);
+		
+		if(num >= 100){
+		//加载完成
+			loadBg2.style.transform='translateX('+(loadBg2.clientWidth*num/100)-loadBg2.clientWidth+'px)';
+			loadBg2.style.Webkittransform='translateX('+(loadBg2.clientWidth*num/100)-loadBg2.clientWidth+'px)';
+			jindu.innerHTML=num+'%';
+			setTimeout(function(){
+				var html = '<!-------------slide0----------------->\
+				 				<section class="swiper-slide swiper-slide1">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/001.png" class="ani resize oFanzhuan1"  style="width:263px;left:25px;top:82px;z-index:3;"  > \
+									<img src="upload/002.png" class="ani resize oFanzhuan" style="width:263px;left:25px;top:82px;z-index:4;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/003.png" class="ani resize" style="width:117px;left:116px;top:185px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="1.7s"  > \
+									<img src="upload/004.png" class="ani resize" style="width:150px;left:90px;top:245px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2.7s"  > \
+									<img src="upload/005.png" class="ani resize" style="width:150px;left:90px;top:262px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.2s"  > \
+									<img src="upload/006.png" class="ani resize" style="width:150px;left:90px;top:280px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/007.png" class="ani resize" style="width:150px;left:90px;top:296px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="4.3s"  > \
+									<img src="upload/008.png" class="ani resize" style="width:150px;left:92px;top:311px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="4.8s"  > \
+									<img src="upload/009.png" class="ani resize" style="width:150px;left:92px;top:411px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="5.3s"  > \
+									<img src="upload/010.png" class="ani resize" style="width:42px;left:140px;top:431px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="5.8s"  > \
+									<img src="upload/012.png" class="ani resize" style="width:42px;left:140px;top:470px;z-index:3;"swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="6.8s"  > \
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide1----------------->\
+								<section class="swiper-slide">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/yi1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/yi2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/yifu.png" class="ani resize" style="width:58px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  > \
+									<img src="upload/1-4.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/1-3.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s "  > \
+									<img src="upload/1-2.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  > \
+									<img src="upload/1-1.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  > \
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game1 resizeZ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/liangzi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque1 resizeX"> \
+										<img src="upload/02.png" class="oCuowu oCuowu1 resizeX">\
+										<ul class="textList textList1 resizeZ">\
+											<!--listLi css公共类 youxi1 js公共类-->\
+											<li class="listLi youxi1 listLi1 resizeZ">绣</li>\
+											<li class="listLi youxi1 listLi2 resizeZ">鲤</li>\
+											<li class="listLi youxi1 listLi3 resizeZ">寻</li>\
+											<li class="listLi youxi1 listLi4 resizeZ">丝</li>\
+											<li class="listLi youxi1 listLi5 resizeZ">意</li>\
+											<li class="listLi youxi1 listLi6 resizeZ">州</li>\
+											<li class="listLi youxi1 listLi7 resizeZ">千</li>\
+											<li class="listLi youxi1 listLi8 resizeZ">纸</li>\
+											<li class="listLi youxi1 listLi9 resizeZ">苗</li>\
+											<li class="listLi youxi1 listLi10 resizeZ">燕</li>\
+											<li class="listLi youxi1 listLi11 resizeZ">萧</li>\
+											<li class="listLi youxi1 listLi12 resizeZ">寨</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult1 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity1 resizeZ"></div>\
+										<div class="browse browse1 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide2----------------->\
+								<section class="swiper-slide">\
+								   <img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/shi1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/shi2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/shipin.png" class="ani resize" style="width:58px;left:205px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  >\
+									<img src="upload/2-6.png" class="ani resize" style="width:13px;left:85px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.4s"  > \
+									<img src="upload/2-5.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.1s"  > \
+									<img src="upload/2-4.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/2-3.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  > \
+									<img src="upload/2-2.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  >\
+									<img src="upload/2-1.png" class="ani resize" style="width:13px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  >\
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game2 resizeZ ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/sizi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque2 resizeX">    \
+										<img src="upload/02.png" class="oCuowu oCuowu2 resizeX"> \
+										<ul class="textList textList2 resizeZ">\
+											<!--listLi css公共类 youxi1 js公共类-->\
+											<li class="listLi youxi2 listLi1 resizeZ">雷</li>\
+											<li class="listLi youxi2 listLi2 resizeZ">味</li>\
+											<li class="listLi youxi2 listLi3 resizeZ">道</li>\
+											<li class="listLi youxi2 listLi4 resizeZ">家</li>\
+											<li class="listLi youxi2 listLi5 resizeZ">贵</li>\
+											<li class="listLi youxi2 listLi6 resizeZ">山</li>\
+											<li class="listLi youxi2 listLi7 resizeZ">千</li>\
+											<li class="listLi youxi2 listLi8 resizeZ">客</li>\
+											<li class="listLi youxi2 listLi9 resizeZ">鱼</li>\
+											<li class="listLi youxi2 listLi10 resizeZ">燕</li>\
+											<li class="listLi youxi2 listLi11 resizeZ">萧</li>\
+											<li class="listLi youxi2 listLi12 resizeZ">酱</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult2 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity2 resizeZ"></div>\
+										<div class="browse browse2 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide3----------------->\
+								<section class="swiper-slide">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/zhi1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/zhi2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/zhusuo.png" class="ani resize" style="width:58px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  > \
+									<img src="upload/3-5.png" class="ani resize" style="width:13px;left:85px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.1s"  > \
+									<img src="upload/3-4.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/3-3.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s "  > \
+									<img src="upload/3-2.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  > \
+									<img src="upload/3-1.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  > \
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game2 resizeZ ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/sanzi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque3 resizeX">    \
+										<img src="upload/02.png" class="oCuowu oCuowu3 resizeX"> \
+										<ul class="textList textList3 resizeZ">\
+											<!--listLi css公共类 youxi1 js公共类-->\
+											<li class="listLi youxi3 listLi1 resizeZ">魅</li>\
+											<li class="listLi youxi3 listLi2 resizeZ">户</li>\
+											<li class="listLi youxi3 listLi3 resizeZ">吊</li>\
+											<li class="listLi youxi3 listLi4 resizeZ">味</li>\
+											<li class="listLi youxi3 listLi5 resizeZ">贵</li>\
+											<li class="listLi youxi3 listLi6 resizeZ">脚</li>\
+											<li class="listLi youxi3 listLi7 resizeZ">千</li>\
+											<li class="listLi youxi3 listLi8 resizeZ">楼</li>\
+											<li class="listLi youxi3 listLi9 resizeZ">苗</li>\
+											<li class="listLi youxi3 listLi10 resizeZ">燕</li>\
+											<li class="listLi youxi3 listLi11 resizeZ">手</li>\
+											<li class="listLi youxi3 listLi12 resizeZ">酱</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult3 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity3 resizeZ"></div>\
+										<div class="browse browse3 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide4----------------->\
+								<section class="swiper-slide">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/xing1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/xing2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/xinglu.png" class="ani resize" style="width:58px;left:205px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  > \
+									<img src="upload/6-6.png" class="ani resize" style="width:13px;left:85px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.4s"  > \
+									<img src="upload/6-5.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.1s"  > \
+									<img src="upload/6-4.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/6-3.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  > \
+									<img src="upload/6-2.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  >\
+									<img src="upload/6-1.png" class="ani resize" style="width:13px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  >\
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game2 resizeZ ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/sanzi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque4 resizeX">\
+										<img src="upload/02.png" class="oCuowu oCuowu4 resizeX">     \
+										<ul class="textList textList4 resizeZ">\
+											<!--listLi css公共类 youxi1 js公共类-->\
+											<li class="listLi youxi4 listLi1 resizeZ">云</li>\
+											<li class="listLi youxi4 listLi2 resizeZ">户</li>\
+											<li class="listLi youxi4 listLi3 resizeZ">风</li>\
+											<li class="listLi youxi4 listLi4 resizeZ">味</li>\
+											<li class="listLi youxi4 listLi5 resizeZ">鱼</li>\
+											<li class="listLi youxi4 listLi6 resizeZ">州</li>\
+											<li class="listLi youxi4 listLi7 resizeZ">骁</li>\
+											<li class="listLi youxi4 listLi8 resizeZ">纸</li>\
+											<li class="listLi youxi4 listLi9 resizeZ">雨</li>\
+											<li class="listLi youxi4 listLi10 resizeZ">燕</li>\
+											<li class="listLi youxi4 listLi11 resizeZ">萧</li>\
+											<li class="listLi youxi4 listLi12 resizeZ">桥</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult4 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity4 resizeZ"></div>\
+										<div class="browse browse4 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide5----------------->\
+								<section class="swiper-slide">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/ying1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/ying2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/yingzi.png" class="ani resize" style="width:58px;left:205px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  > \
+									<img src="upload/5-6.png" class="ani resize" style="width:13px;left:85px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.4s"  > \
+									<img src="upload/5-5.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.1s"  > \
+									<img src="upload/5-4.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/5-3.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  > \
+									<img src="upload/5-2.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  >\
+									<img src="upload/5-1.png" class="ani resize" style="width:13px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  >\
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game2 resizeZ ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/sizi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque5 resizeX">\
+										<img src="upload/02.png" class="oCuowu oCuowu5 resizeX">     \
+										<ul class="textList textList5 resizeZ">\
+											<!--listLi css公共类 youxi1 js公共类-->\
+											<li class="listLi youxi5 listLi1 resizeZ">魅</li>\
+											<li class="listLi youxi5 listLi2 resizeZ">户</li>\
+											<li class="listLi youxi5 listLi3 resizeZ">寻</li>\
+											<li class="listLi youxi5 listLi4 resizeZ">味</li>\
+											<li class="listLi youxi5 listLi5 resizeZ">贵</li>\
+											<li class="listLi youxi5 listLi6 resizeZ">州</li>\
+											<li class="listLi youxi5 listLi7 resizeZ">千</li>\
+											<li class="listLi youxi5 listLi8 resizeZ">纸</li>\
+											<li class="listLi youxi5 listLi9 resizeZ">苗</li>\
+											<li class="listLi youxi5 listLi10 resizeZ">燕</li>\
+											<li class="listLi youxi5 listLi11 resizeZ">萧</li>\
+											<li class="listLi youxi5 listLi12 resizeZ">寨</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult5 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity5 resizeZ"></div>\
+										<div class="browse browse5 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide6----------------->\
+								<section class="swiper-slide">\
+									<img src="upload/2.png" class="ani resize img1" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"  > \
+									<img src="upload/shu1.png" class="ani resize" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+									<img src="upload/shu2.png" class="ani resize ImgBtn" style="width:303px;left:10px;top:-20px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2s"  >\
+									<img src="upload/shuzi.png" class="ani resize" style="width:58px;left:205px;top:300px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.3s"  > \
+									<img src="upload/4-6.png" class="ani resize" style="width:13px;left:85px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.4s"  > \
+									<img src="upload/4-5.png" class="ani resize" style="width:13px;left:105px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.1s"  > \
+									<img src="upload/4-4.png" class="ani resize" style="width:13px;left:125px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.8s"  > \
+									<img src="upload/4-3.png" class="ani resize" style="width:13px;left:145px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  > \
+									<img src="upload/4-2.png" class="ani resize" style="width:13px;left:165px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="3.2s"  >\
+									<img src="upload/4-1.png" class="ani resize" style="width:13px;left:185px;top:300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.9s"  >\
+									<img src="upload/dian.png" class="ani resize gameBtn infinite" style="width:58px;left:175px;top:115px;z-index:3;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4.6s"  >\
+									<div class="game game3 resizeZ ">\
+										<img src="upload/10.png" class="close resizeX">\
+										<img src="upload/qizi.png" class="ani topTxt resize" style="width:218px;left:30px;top:40px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s">\
+										<img src="upload/left0.png" class="ani leftImg resize" style="width:107px;left:-25px;top:65px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">\
+										<img src="upload/right0.png" class="ani rightImg resize" style="width:107px;left:188px;top:240px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.1s">\
+										<img src="upload/01.png" class="zhengque zhengque6 resizeX">\
+										<img src="upload/02.png" class="oCuowu oCuowu6 resizeX"> \
+										<ul class="textList textList6 resizeZ">\
+											<!--listLi css公共类-->\
+											<li class="listLi youxi6 listLi1 resizeZ">数</li>\
+											<li class="listLi youxi6 listLi2 resizeZ">据</li>\
+											<li class="listLi youxi6 listLi3 resizeZ">寻</li>\
+											<li class="listLi youxi6 listLi4 resizeZ">味</li>\
+											<li class="listLi youxi6 listLi5 resizeZ">贵</li>\
+											<li class="listLi youxi6 listLi6 resizeZ">州</li>\
+											<li class="listLi youxi6 listLi7 resizeZ">千</li>\
+											<li class="listLi youxi6 listLi8 resizeZ">大</li>\
+											<li class="listLi youxi6 listLi9 resizeZ">中</li>\
+											<li class="listLi youxi6 listLi10 resizeZ">心</li>\
+											<li class="listLi youxi6 listLi11 resizeZ">萧</li>\
+											<li class="listLi youxi6 listLi12 resizeZ">寨</li>\
+										</ul>\
+										<!--result 用户选择的结果-->\
+										<div class="oResult oResult6 resizeZ"></div>\
+										<!--重选按钮-->\
+										<div class="Gravity Gravity6 resizeZ"></div>\
+										<div class="browse browse6 resizeZ"></div>\
+									</div>\
+									<img src="images/web-swipe-tip.png" style="width:20px;height:15px; bottom:20px; left:150px;" id="array" class="resize"> \
+								</section>\
+								<!-------------slide7----------------->\
+								<section class="swiper-slide">\
+								  <img src="upload/bg2.jpg" class="resize bg2" style="width:320px;height:520px;left:0px;top:0px;z-index:3;">\
+								  <img src="upload/bg3.jpg" class="resize bg3" style="width:320px;height:520px;left:0px;top:0px;z-index:3;" >\
+								  <img src="upload/zuihou1.png" class="ani resize" style="width:208px;left:56px;top:75px;z-index:3;" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s"  > \
+								  <img src="upload/zuihou2.png" class="ani resize" style="width:92px;left:114px;top:210px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s"  >\
+								  <img src="upload/zuihou4.png" class="ani resize" style="width:168px;left:70px;top:250px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2.5s"  >\
+								  <img src="upload/zuihou5.png" class="ani resize choujiang" style="width:136px;left:20px;top:358px;z-index:3;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  >\
+								  <img src="upload/zuihou6.png" class="ani resize huatiBtn" style="width:136px;left:160px;top:358px;z-index:3;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3.5s"  >\
+								  <img src="upload/zuihou7.png" class="ani resize FXBtn" style="width:182px;left:65px;top:412px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="4.5s"  >\
+								  <!--参与抽奖-->\
+								  <div class="draw resizeZ">\
+										<div class="info resizeZ">\
+											<img src="upload/10.png" class="guanbi resizeX">\
+											<div class="info1">\
+												<img src="upload/dshang.png" class="ani leftImg resize" style="width:107px;left:237px;top:-18px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0s">\
+												<img src="upload/dxia.png" class="ani rightImg resize" style="width:107px;left:-74px;top:305px;" swiper-animate-effect=" fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.2s">\
+												<img src="upload/name.png" class="nameImg resizeX">\
+												<img src="upload/phone.png" class="phoneImg resizeX">\
+												<img src="upload/zuihou10.png" class="zuihou10 resizeX">\
+												<img src="upload/xinxi.png" class="xinxi resizeX">\
+												<img src="upload/shuoming.png" class="shuoming resizeX">\
+												<input type="text" class="nameInp resizeZ">\
+												<input type="text" class="phoneInp resizeZ">\
+											</div>\
+											<div class="info2">\
+											   <img src="upload/zuihou11.png" class="zuihou11 resizeX">\
+											   <a href="index.html" class="zuihou12 resizeZ"></a>\
+											   <img src="upload/shuoming2.png" class="zuihou122 resizeX">\
+											</div>\
+											<div class="info3">\
+												<img src="upload/zuihou14.png" class="zuihou14 resizeX">\
+											</div>\
+										</div>\
+										<img src="upload/success.png" class="success resizeX">\
+								  </div>\
+								  <!--分享页-->\
+								  <div class="FX resizeZ">\
+										<img src="upload/FX.png" class="FXImg resizeX">\
+										<img src="upload/FXtxt.png" class="FXTxt resizeX">\
+								  </div>\
+								  <!--参与话题-->\
+								  <div class="huatiBox resizeZ">\
+										<div class="info resizeZ">\
+											<img src="upload/10.png" class="dianji resizeX">	\
+											<img src="upload/dshang.png" class="ani leftImg resize" style="width:107px;left:237px;top:-18px;" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0s">\
+											<img src="upload/dxia.png" class="ani rightImg resize" style="width:107px;left:-74px;top:305px;" swiper-animate-effect=" fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s">\
+											<img src="upload/changan.png" class="ani resize" style="width:178px;left:56px;top:65px;z-index:3;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  >\
+											<img src="upload/erweima.png" class="ani resize" style="width:118px;left:87px;top:85px;z-index:3;" swiper-animate-effect="fadeIn " swiper-animate-duration="1s" swiper-animate-delay="1s"  >\
+											<img src="upload/gongtan.png" class="ani resize" style="width:137px;left:76px;top:215px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"  >\
+										</div>\
+								  </div>\
+								</section>';
+				var oBody=document.querySelector('body');
+				var seiperBox=document.querySelector('.swiper-container');
+				var swiper=document.querySelector('.swiper-wrapper');
+				
+				
+				swiper.innerHTML = html;
+				var oHead = document.getElementsByTagName('HEAD').item(0);
+				var oScript= document.createElement("script");
+				oScript.type = "text/javascript";
+				oScript.src="js/size.js";
+				oBody.appendChild( oScript);
+				oScript.onload = function(){
+					
+					var oScript2= document.createElement("script");
+					oScript2.type = "text/javascript";
+					oScript2.src="js/swiper.animate.min.js";
+					
+					oBody.appendChild(oScript2);
+					oScript2.onload = function(){
+						setTimeout(function(){
+							oLoding.style.display='none';
+						},200);
+						var oScript3= document.createElement("script");
+						oScript3.type = "text/javascript";
+						oScript3.src="js/index.js";
+						oBody.appendChild(oScript3);
+							oScript3.onload = function(){
+								
+								$.music('music/music2.mp3');
+								
+							}
+					}
+					
+					
+				}
+
+			}, 600);
+		
+		}else if(num >= 99){
+			loadBg2.style.transform='translateX('+(-loadBg2.clientWidth + loadBg2.clientWidth*num/100)+'px)';
+			loadBg2.style.Webkittransform='translateX('+(-loadBg2.clientWidth + loadBg2.clientWidth*num/100)+'px)';
+			jindu.innerHTML=num+'%';
+		
+		
+		}else if(num >= 0){
+			loadBg2.style.transform='translateX('+(-loadBg2.clientWidth + loadBg2.clientWidth*num/100)+'px)';
+			loadBg2.style.Webkittransform='translateX('+(-loadBg2.clientWidth + loadBg2.clientWidth*num/100)+'px)';
+			jindu.innerHTML=num+'%';
+		
+		}
+	});
+	loader.start();
+
+},false);
+</script>
+
+<script>  
+function getStyle(obj,sName){
+	if(obj.currentStyle){
+			return obj.currentStyle[sName];
+		}else{
+			return getComputedStyle(obj,false)[sName];
+		}
+	};
+	var scaleW=parseInt(document.body.clientWidth||document.documentElement.clientWidth)/320; 
+	var resizes66 = document.querySelectorAll('.resize66');
+	//计算除图片元素以外的宽、高、top、left
+	for (var j=0; j<resizes66.length; j++) {
+	   resizes66[j].style.width=parseInt(getStyle(resizes66[j],'width'))*scaleW+'px';
+	   resizes66[j].style.height=parseInt(getStyle(resizes66[j],'height'))*scaleW+'px';
+	   resizes66[j].style.top=parseInt(getStyle(resizes66[j],'top'))*scaleW+'px';
+	   resizes66[j].style.left=parseInt(getStyle(resizes66[j],'left'))*scaleW+'px';
+	};
+</script>
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+<script>
+    $.ajax({
+        type : 'GET',
+        url: 'http://monitor.iblacktree.com/user-reg/gl/getURLSign',
+        data: {
+            url: location.href.split('#')[0]
+        },
+        dataType: 'json',
+        success: function(data){
+        	//alert(data.signature)
+              wx.config({
+                debug: false,
+                appId: data.appId,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                  // 所有要调用的 API 都要加到这个列表中
+                        'checkJsApi',
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage'
+                ]
+              });
+
+                var shareData = {
+					title: '云上贵州，当文化与科技不期而遇',
+					desc: 'Qualcomm中国邀您携手共创不期而遇的精彩！',
+					link: 'http://monitor.iblacktree.com/gaotongguizhou/index.html',
+					imgUrl: 'http://monitor.iblacktree.com/gaotongguizhou/upload/user.jpg'
+                };
+
+                wx.ready(function () {
+                    wx.onMenuShareTimeline({
+                        title: shareData.title, // 分享标题
+                        desc: shareData.desc, // 分享描述
+                        link: shareData.link, // 分享链接
+                        imgUrl: shareData.imgUrl, // 分享图标
+                        success: function () { 
+                            // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () { 
+                            // 用户取消分享后执行的回调函数
+                        }
+                    });
+                    wx.onMenuShareAppMessage({
+                        title: shareData.title, // 分享标题
+                        desc: shareData.desc, // 分享描述
+                        link: shareData.link, // 分享链接
+                        imgUrl: shareData.imgUrl, // 分享图标
+                        success: function () { 
+                            // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () { 
+                            // 用户取消分享后执行的回调函数
+                        }
+                    });
+
+                });
+
+        },
+        error: function(){
+          // alert("error,微站后台暂时不能提供服务，请联系公众号管理员");
+        }
+    });
+    </script>
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?a7d47a979bd9ea518c14445422f41970";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=54625745" charset="UTF-8"></script>
+</body>
+</html>

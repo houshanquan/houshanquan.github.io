@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<style>
+   *{
+    margin: 0;padding: 0;list-style: none; text-decoration:none;
+   }
+   .header{padding-top: 20px; width:100%; height:77px; margin:auto; width:60%;}
+    .header img{ float:left; margin:0 20px 0 30px;}
+    .header h1{ font-size:30px; font-weight:normal;text-shadow:#fff 1px 1px 1px;}
+    .header h1 a:hover{ text-decoration:underline}
+    .header p{margin:15px 15px 0 5px;text-shadow:#000 1px 1px 1px;color:aqua; float:left;}
+    .header .p1{
+        color:;
+    }
+    html, body {
+        
+        position: relative;
+        height: 100%;
+
+    }
+    body {
+        background: url(img/5.jpg) no-repeat;
+        background-size:100% 100%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        opacity: 0.6;
+        width: 60%;
+        height: 50%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+    }
+      .shortcut{height:32px;line-height:32px;font-size:12px;background:#eee;text-transform:uppercase;box-shadow:1px 0px 2px rgba(0,0,0,0.2);border-bottom:1px solid #DDDDDD;}
+    
+    .shortcut .close{
+        background:url(/Public/images/close-demo.gif) no-repeat 0 0;width:20px;height:20px;line-height:99em;overflow:hidden;display:inline-block;margin:6px 10px 0 10px;float:right;padding:0;
+        -webkit-transition:all .3s ease-out 0s;
+        -moz-transition:all .3s ease-out 0s;
+        -ms-transition:all .3s ease-out 0s;
+        -o-transition:all .3s ease-out 0s;
+        transition:all .3s ease-out 0s;
+    }
+    #div1{
+        margin-top: 30px;
+    }
+    #div1 ul{
+        background: #000;
+        overflow: hidden;
+    }
+    #div1 ul li{
+        text-align: center;
+        float: left;
+        width:33%;
+    }
+   #div1 ul li a{
+            color:aqua;
+          font-size: 24px;
+    }
+    #div1 ul li{
+
+    }
+    .swiper-container #divBox{
+        overflow: hidden;
+    }
+
+    .swiper-container #divBox .box{
+        margin:20px 0;
+        width: 22%;
+        height:150px;
+        overflow: hidden;
+        float: left;
+    }
+    .swiper-container #divBox .box .a1 img{
+        margin:0px 10%;
+        display: block;
+        width:100%;
+        height:100%;
+        
+    }
+    .swiper-container #divBox .box .a1{
+        display: block;
+      width:100%;
+        height:80%;
+    }
+    .swiper-container #divBox .box .a2 h2{
+    display: block;
+      width:100%;
+     height:20%;
+     color:#fff;
+     text-align: center;
+    }
+    </style>
+    <script>
+        /*var oA = new Audio();
+         oA.src = 'mp3/逆流成河.mp3';
+         oA.play();*/
+    </script>
+</head>
+<body>
+    <div class="header" id="box"> 
+        <img src="img/111.jpg" height="65" width="170">
+        <h1><a href="#" class="title">侯山权个人网站</a></h1>
+        <p>电话:15910351428</p>
+        <p>邮箱:shanquanhou@163.com</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+       <input name=ie type=hidden value=utf-8>
+
+        <div class="swiper-wrapper">
+            <img src="img/1.jpg" alt="" class="swiper-slide" >
+            <img src="img/2.jpg" alt="" class="swiper-slide" >
+            <img src="img/3.jpg" alt="" class="swiper-slide" >
+            <img src="img/4.jpg" alt="" class="swiper-slide" >
+            <img src="img/6.jpg" alt="" class="swiper-slide" >
+            <img src="img/7.jpg" alt="" class="swiper-slide" >
+            <img src="img/8.jpg" alt="" class="swiper-slide" >
+            <img src="img/9.jpg" alt="" class="swiper-slide" >  
+            <img src="img/10.jpg" alt="" class="swiper-slide" >
+            <img src="img/11.jpg" alt="" class="swiper-slide" >
+            <img src="img/12.jpg" alt="" class="swiper-slide" >
+            <img src="img/13.jpg" alt="" class="swiper-slide" >
+            <img src="img/14.jpg" alt="" class="swiper-slide" >
+            <img src="img/15.jpg" alt="" class="swiper-slide" > 
+            <img src="img/16.jpg" alt="" class="swiper-slide" > 
+
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"> </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div id="div1">
+             <ul>
+                <li><a href="新浪/新浪.html" title="网站首页">个人项目</a></li>
+                <li><a href="文化与科技不期而遇第四版/index.html" title="网站首页">个人项目2</a></li>
+                <li><a href="http://y.qq.com/portal/player.html">在线音乐</a></li> 
+                <li><a href="应聘前端工程师岗位__侯山权__18301011379.doc">个人简历</a></li>
+            </ul>  
+         </div>
+         <div id="divBox">
+            <div class="box">
+                <a href="plug/屏保.html" class="a1"><img src="img/1.png" alt=""></a>
+                <a href="plug/屏保.html" class="a2"><h2>屏保动画</h2></a>
+            </div>
+            <div class="box">
+                <a href="plug/旋转图片.html" class="a1"><img src="img/img2.1.jpg" alt=""></a>
+                <a href="plug/旋转图片.html" class="a2"><h2>图片动画</h2></a>
+            </div>
+            <div class="box">
+                <a href="plug/旋转立方.html" class="a1"><img src="img/12.jpg" alt=""></a>
+                <a href="plug/旋转立方.html" class="a2"><h2>立方图</h2></a>
+            </div>
+            <div class="box">
+                <a href="plug/捕鱼.html" class="a1"><img src="img/yu.jpg" alt=""></a>
+                <a href="plug/捕鱼.html" class="a2"><h2>捕鱼</h2></a>
+            </div>
+        </div>
+    </div>
+
+    
+    
+   
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 100,
+        effect:'fade',
+        effect : 'cube',
+        autoplay :2000,
+        speed:2000,
+        loop:true,
+    });
+    </script>
+    
+</body>
+</html>
